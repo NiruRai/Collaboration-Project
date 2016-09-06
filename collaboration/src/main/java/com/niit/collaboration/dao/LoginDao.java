@@ -1,0 +1,21 @@
+package com.niit.collaboration.dao;
+
+import java.util.List;
+
+import com.niit.collaboration.model.Login;
+
+public interface LoginDao {
+	
+	public List<Login> loginlist();
+	
+	public boolean saveOrUpdate(Login login);
+	
+	public void delete(int id);
+	
+	public Login getLoginByName(String username);
+	
+	public Login getLoginById(int id);
+	
+	public boolean IsValidUser(String username,String password);
+
+}
