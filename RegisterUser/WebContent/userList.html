@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>UserList</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+</head>
+<body data-ng-app="Users">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">RegisterUser&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+			</div>
+
+
+			<div class="collapse navbar-collapse" id="myNavbar">
+
+				<ul class="nav navbar-nav navbar-right">
+
+					<li><a href="userList.html"><span
+							class="glyphicon glyphicon-user"></span> View List</a></li>
+
+					<li><a href="index.html"><span
+							class="glyphicon glyphicon-log-in"></span> Insert User</a></li>
+
+				</ul>
+
+
+			</div>
+		</div>
+	</nav>
+
+
+	<div data-ng-controller="UsersController">
+		<div class="container" align="center">
+			<div align="center">
+				<input class="form-control" id="ex3" type="text"
+					data-ng-model="search" placeholder="serch user...">
+			</div>
+			<br>
+			<br>
+			<h1 class="app-title">{{ appTitle }}</h1>
+			<div class="table-responsive">
+				<table class="table table-striped">
+					<tr>
+						<td><b>User ID</b></td>
+						<td><b>User Name</b></td>
+						<td><b>User Salary</b></td>
+						<td><b>User Address</b></td>
+						<td><b>Action</b></td>
+					</tr>
+					<tr data-ng-repeat="user in users|filter:search">
+						<td>{{ user.userno }}</td>
+						<td><span  data-ng-click="UsersController.editUser(user.userno)">{{ user.username }}</span></td>
+						<td>{{ user.usersalary }}</td>
+						<td>{{user.useraddress}}</td>
+						<td>
+							<button data-ng-click="deleteUser(user)" class="btn btn-danger">Delete</button>
+
+						</td>
+					</tr>
+
+				</table>
+				<div>Total Users : {{count}}</div>
+			</div>
+
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3">
+					<h6>Copyright &copy; 2016 Niru Rai</h6>
+				</div>
+				<!-- end col-sm-3 -->
+
+			</div>
+		</div>
+	</footer>
+	<script src="angular.js"></script>
+</body>
+</html>

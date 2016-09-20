@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+
+</head>
+<body data-ng-app="Users">
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">RegisterUser&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+			</div>
+
+
+			<div class="collapse navbar-collapse" id="myNavbar">
+
+				<ul class="nav navbar-nav navbar-right">
+
+					<li><a href="userList.html"><span
+							class="glyphicon glyphicon-user"></span> View List</a></li>
+
+					<li><a href="index.html"><span
+							class="glyphicon glyphicon-log-in"></span> Insert User</a></li>
+
+				</ul>
+
+
+			</div>
+		</div>
+	</nav>
+
+
+	<div data-ng-controller="UsersController">
+		<div class="container" align="center">
+
+			<h1 class="app-headline">{{ appHeadline }}</h1>
+
+			<form name="frm">
+				<table class="table table-bordered">
+					<tr>
+						<td>User ID</td>
+						<td><input type="text" name="userno" data-ng-model="userno"
+							required><br /></td>
+					</tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+					<tr>
+						<td>User Name</td>
+						<td><input type="text" name="username"
+							data-ng-model="username" required></td>
+					</tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+					<tr>
+						<td>Users Salary</td>
+						<td><input type="text" name="usersalary"
+							data-ng-model="usersalary"></td>
+					</tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+					<tr>
+						<td>User Address</td>
+						<td><input type="text" name="useraddress"
+							data-ng-model="useraddress"></td>
+					</tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+					<tr>
+						<td colspan="2" align="right">
+
+							<button data-ng-click="addUsers()"
+								data-ng-disabled="frm.$invalid" class="btn btn-primary"
+								align="left">Register User</button>
+						</td>
+
+					</tr>
+				</table>
+			</form>
+			<br>
+			<br>
+
+
+		</div>
+		<br>
+		<br>
+
+	</div>
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3">
+					<h6>Copyright &copy; 2016 Niru Rai</h6>
+				</div>
+				<!-- end col-sm-3 -->
+
+
+			</div>
+			<!-- end row -->
+		</div>
+		<!-- end container -->
+	</footer>
+
+	<script src="angular.js"></script>
+</body>
+</html>
