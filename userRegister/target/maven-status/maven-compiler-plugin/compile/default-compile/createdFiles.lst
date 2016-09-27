@@ -1,0 +1,8 @@
+com\niit\userRegister\model\User.class
+com\niit\userRegister\configuration\UserRegisterConfiguration.class
+com\niit\userRegister\service\UserService.class
+com\niit\userRegister\service\UserServiceImpl.class
+com\niit\userRegister\controller\UserRestController.class
+com\niit\userRegister\configuration\UserRegisterInitializer.class
+com\niit\userRegister\configuration\CORSFilter.class
+com\niit\userRegister\controller\HomeController.class
